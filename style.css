@@ -48,6 +48,7 @@
     top: 30px;
     font-size: 27px;
     color:white;
+    
   }
 
   /* NAVBAR */  
@@ -76,7 +77,7 @@
   
   #navbtns i {
     font-size: 1.5rem;
-    color: black;
+    color: #5c5c5c;
   }
   #navbtns i:active {
     font-size: 1.3rem;
@@ -156,7 +157,9 @@ img{
 /***Pomodoro***/
 
 .pomo{
-    background: url(https://static.vecteezy.com/system/resources/previews/000/579/103/large_2x/abstract-3d-realistic-liquid-or-fluid-circles-purple-pastels-color-beautiful-background-vector.jpg) fixed;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/579/103/large_2x/abstract-3d-realistic-liquid-or-fluid-circles-purple-pastels-color-beautiful-background-vector.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #13054d;
     color: white;
     padding: 5em 0em;
@@ -329,7 +332,9 @@ img{
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 #toDo {
-  background: url(https://media.discordapp.net/attachments/808159075195027486/947376002085052486/901658-abstract-gradient-Big-Sur-macOS-macOS-Big-Sur-shapes.png?width=1850&height=1041) fixed;
+  background-image: url(https://media.discordapp.net/attachments/808159075195027486/947376002085052486/901658-abstract-gradient-Big-Sur-macOS-macOS-Big-Sur-shapes.png?width=1850&height=1041);
+  background-size: cover;
+  background-repeat: no-repeat; 
   width: 100%;
   padding: 200px;
  
@@ -403,7 +408,7 @@ img{
   height: 45px;
   line-height: 45px;
   margin-bottom: 8px;
-  background: #f2f2f;
+  background: #f2f2f2;
   border-radius: 3px;
   padding: 0 15px;
   cursor: default;
@@ -432,7 +437,6 @@ img{
   justify-content: space-between;
 }
 .footer button{
-
   padding: 6px 10px;
   border-radius: 3px;
   border: none;
@@ -455,10 +459,21 @@ img{
 
 
 /**graph**/
-.container-fluid{
+#graph{
     
-      background-image: linear-gradient(to right, #ffb9d8, #8cbffb);
+  background-image: linear-gradient(to right, #ffb9d8, #8cbffb);
 
-    /*background: red;*/
-    margin-bottom: 20px;
+  /*background: red;*/
+  margin-bottom: 20px;
+
+  padding: 50px 15px;
+  margin-bottom: 0px;
+}
+
+.form-check-label {
+  padding-left: 0; 
+}
+
+.form-check {
+  margin-bottom: 0.75rem;
 }
