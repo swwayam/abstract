@@ -11,15 +11,11 @@
     background: rgb(142, 73, 232);
   }
   body{
-    width: 100%;
-    height: 100vh;
-    /* overflow: hidden; */
-    padding: 10px;
     background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
   }
 /**navbar**/
 
-.nav {
+/* .nav {
     width: 100%;
     padding-top: 20px;
   background-color: #02082c;
@@ -44,13 +40,61 @@
   .nav-links li a {
     color: #fff;
     text-decoration: none;
+  } */
+
+  .logo {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 27px;
+    color:white;
   }
+
+  /* NAVBAR */  
+  #navbtns {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    z-index: 8888;
+    transform: translateY(-50%);
+    gap: 50px;
+  }
+  
+  #navbtns a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+  }
+  
+  #navbtns a:hover > .itemreveal {
+    display: block;
+  }
+  
+  #navbtns i {
+    font-size: 1.5rem;
+    color: black;
+  }
+  #navbtns i:active {
+    font-size: 1.3rem;
+  }
+  
+  .itemreveal {
+    padding: 2px 5px;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    display: none;
+  }
+  
 
 
   /***Clock***/
 
 .clock-bg{
-    background: url(https://dl.dropbox.com/s/8bojjv34k37t16m/Webp.net-resizeimage%20%282%29.jpg?raw=1) no-repeat center center fixed;
+    background: url(https://static.vecteezy.com/system/resources/previews/001/736/031/non_2x/abstract-3d-fluid-blue-and-pink-gradient-wave-vector.jpg) no-repeat center center fixed;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -112,7 +156,11 @@ img{
 /***Pomodoro***/
 
 .pomo{
-    height:84vh;
+    background: url(https://static.vecteezy.com/system/resources/previews/000/579/103/large_2x/abstract-3d-realistic-liquid-or-fluid-circles-purple-pastels-color-beautiful-background-vector.jpg) fixed;
+    background-color: #13054d;
+    color: white;
+    padding: 5em 0em;
+
 }
 
 .body-session {
@@ -128,7 +176,7 @@ img{
 }
 
 .header {
-    margin: 50px 0 20px;
+    padding-bottom: 1em;
     text-align: center;
     font-size: 3em;
 }
@@ -142,6 +190,11 @@ img{
     display: inline-block;
     width: 295px;
     text-align: center;
+}
+
+.length-control__wrap a {
+  text-decoration: none;
+  color: white;
 }
 
 .length-control__wrap.disabled > *,
@@ -163,6 +216,8 @@ img{
 
 .length-control__button:hover {
     opacity: .9;
+    color: lightgray;
+    text-decoration: none;
 }
 
 .length-control__button.disabled {
@@ -176,8 +231,21 @@ img{
 
 }
 
+.timer-button-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .timer {
-    display: block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.timer-container {
+    display: none;
     position: relative;
     max-width: 600px;
     margin: 30px auto 0;
@@ -260,14 +328,23 @@ img{
 /*****Todo******/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+#toDo {
+  background: url(https://media.discordapp.net/attachments/808159075195027486/947376002085052486/901658-abstract-gradient-Big-Sur-macOS-macOS-Big-Sur-shapes.png?width=1850&height=1041) fixed;
+  width: 100%;
+  padding: 200px;
+ 
+}
+
+
+
 .wrapper{
   background: #fff;
   max-width: 400px;
   width: 100%;
-  margin: 120px auto;
+  margin: 0px auto;
   padding: 25px;
   border-radius: 5px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 20px 30px rgb(0 0 0 / 50%);
 }
 .wrapper header{
   font-size: 30px;
@@ -318,6 +395,7 @@ img{
 .wrapper .todoList{
   max-height: 250px;
   overflow-y: auto;
+  padding: 0px;
 }
 .todoList li{
   position: relative;
@@ -325,7 +403,7 @@ img{
   height: 45px;
   line-height: 45px;
   margin-bottom: 8px;
-  background: #f2f2f2;
+  background: #f2f2f;
   border-radius: 3px;
   padding: 0 15px;
   cursor: default;
@@ -334,6 +412,7 @@ img{
 .todoList li .icon{
   position: absolute;
   right: -45px;
+
   background: #e74c3c;
   width: 45px;
   text-align: center;
@@ -353,6 +432,7 @@ img{
   justify-content: space-between;
 }
 .footer button{
+
   padding: 6px 10px;
   border-radius: 3px;
   border: none;
@@ -376,6 +456,9 @@ img{
 
 /**graph**/
 .container-fluid{
-    background: #ffff;
+    
+      background-image: linear-gradient(to right, #ffb9d8, #8cbffb);
+
+    /*background: red;*/
     margin-bottom: 20px;
 }
