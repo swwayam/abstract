@@ -35,7 +35,9 @@
          secondsText: 'timer-count__seconds-text',
          bodyPause:'body-pause',
          bodySession:'body-session',
-         bodyBreak:'body-break'
+         bodyBreak:'body-break',
+         timerButtonDiv:'timer-button-div',
+         timerContainer:'timer-container'
      };
  
      var countdownTimer;
@@ -57,7 +59,7 @@
              $('.'+selectors.numberParent).removeClass(selectors.disabled);
  
              $('.' + selectors.pauseHeader).text('Timer Paused');
-             $('.' + selectors.actionHeader).text('Start!');
+             $('.' + selectors.timer).text('Start!');
  
              $('body').addClass(selectors.bodyPause);
  
@@ -71,7 +73,7 @@
              $('.'+selectors.numberParent).addClass(selectors.disabled);
  
              $('.' + selectors.pauseHeader).text('');
-             $('.' + selectors.actionHeader).text('Pause!');
+             $('.' + selectors.timer).text('Pause!');
  
              $('body').removeClass(selectors.bodyPause);
  
@@ -87,7 +89,7 @@
              $('.'+selectors.numberParent).addClass(selectors.disabled);
  
              $('.' + selectors.timerHeader).text('Session');
-             $('.' + selectors.actionHeader).text('Pause!');
+             $('.' + selectors.timer).text('Pause!');
  
  
              $('body').addClass(selectors.bodySession);
@@ -164,6 +166,9 @@
      function done() {
  
          stopTimer();
+
+         document.getElementsByClassName('length-control')[0].style.display = "block";
+         document.getElementsByClassName('timer-container')[0].style.display = "none";
  
          var button = $('.' + selectors.timer);
  
@@ -228,6 +233,9 @@
                  seconds--;
              }
          }, 1000);
+
+         document.getElementsByClassName('length-control')[0].style.display = "none";
+         document.getElementsByClassName('timer-container')[0].style.display = "block";
      }
  
      function stopTimer() {
