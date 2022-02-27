@@ -44,11 +44,11 @@
 
   .logo {
     position: absolute;
-    right: 30px;
+    right: 40px;
     top: 30px;
     font-size: 27px;
     color:white;
-    
+    font-style: italic;
   }
 
   /* NAVBAR */  
