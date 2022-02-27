@@ -477,3 +477,7 @@ img{
 .form-check {
   margin-bottom: 0.75rem;
 }
+
+#cContainer canvas {
+  background-color: #fef5f5;
+}
